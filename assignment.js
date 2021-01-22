@@ -30,7 +30,7 @@ function budgetCalculator(clockPrice, mobilePrice, laptopPrice) {
 
 function hotelCost(days) {
     var bill = 0
-    parseFloat(days)
+    parseFloat(days) //convertiong to a float number for bypassing errors
     days = Math.ceil(days) //Half or fraction day will be counted as full day while making bill
     if (isNaN(days)) {
         return "Input has to be a number"
