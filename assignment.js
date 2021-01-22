@@ -55,20 +55,24 @@ function hotelCost(days) {
 
 // Question 4 Ans
 
+
 function megaFriend(name) {
     let element = ""
     let longest = ""
-    for (let i = 0; i < name.length; i++) {
-        element = name[i]; // Taking the Name
-        if (element.length > longest.length) { // Checking the length
-            longest = element;
+    if (Array.isArray(name) == true) { //checking if it is a valid array or not
+        for (let i = 0; i < name.length; i++) {
+            element = name[i]; // Taking the Name
+            if (element.length > longest.length) { // Checking the length
+                longest = element;
+            }
         }
+        return longest;
+    } else {
+        return "This is not a valid array"
     }
-    return longest;
 }
 
-
-// console.log(kilometerToMeter("ok"))
+// console.log(kilometerToMeter("5"))
 // console.log(budgetCalculator(5, 6, 7))
 // console.log(hotelCost("15"))
-// console.log(megaFriend(["Sakib", "Tamim", "Mushfiqur", "Mahmudullah", "Mashrafi"]))
+// console.log(megaFriend(["Sakib", "Tamim", "Mushfiqur", "Mahmudullah", "Mashrafi", "Jubair Ahmed"]))
